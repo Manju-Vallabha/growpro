@@ -12,7 +12,10 @@ from keras.preprocessing.image import load_img, img_to_array
 from streamlit_lottie import st_lottie
 import json
 
+import os
 
+os.system('apt-get update')
+os.system('apt-get install -y libgl1-mesa-glx')
 
 
 st.set_page_config(layout="wide", page_title="GrowPro", page_icon="🌱")
