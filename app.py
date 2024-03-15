@@ -12,6 +12,15 @@ from keras.preprocessing.image import load_img, img_to_array
 from streamlit_lottie import st_lottie
 import json
 
+import subprocess
+
+# Execute shell command to install libgl1-mesa-glx
+try:
+    subprocess.run(["sudo", "apt-get", "install", "libgl1-mesa-glx"], check=True)
+except subprocess.CalledProcessError as e:
+    print(f"Error occurred while installing libgl1-mesa-glx: {e}")
+
+
 st.set_page_config(layout="wide", page_title="GrowPro", page_icon="🌱")
 
 image = ''
